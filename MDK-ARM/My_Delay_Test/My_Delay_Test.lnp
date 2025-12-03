@@ -1,0 +1,19 @@
+--cpu Cortex-M3
+"my_delay_test\startup_stm32f103xb.o"
+"my_delay_test\main.o"
+"my_delay_test\gpio.o"
+"my_delay_test\usart.o"
+"my_delay_test\stm32f1xx_it.o"
+"my_delay_test\stm32f1xx_ll_gpio.o"
+"my_delay_test\stm32f1xx_ll_pwr.o"
+"my_delay_test\stm32f1xx_ll_exti.o"
+"my_delay_test\stm32f1xx_ll_usart.o"
+"my_delay_test\stm32f1xx_ll_dma.o"
+"my_delay_test\stm32f1xx_ll_rcc.o"
+"my_delay_test\stm32f1xx_ll_utils.o"
+"my_delay_test\system_stm32f1xx.o"
+"my_delay_test\my_delay.o"
+--strict --scatter "My_Delay_Test\My_Delay_Test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "My_Delay_Test.map" -o My_Delay_Test\My_Delay_Test.axf
