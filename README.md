@@ -24,7 +24,7 @@ My\_Delay.h&#x20;
 My\_Delay.c
 
     2. 在 `main.c` 里初始化（72 MHz 示例）：
-    ```c
+
     LL_delay_init(72);          // 告诉库当前主频
 
 1.  想用就调：

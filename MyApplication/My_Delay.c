@@ -1,3 +1,12 @@
+/**
+ * @file My_Delay.c
+ * @brief 延时功能实现文件
+ * @details 提供基于SysTick的微秒级、毫秒级阻塞延时，以及非阻塞延时功能，
+ *          同时包含系统滴答计数和printf重定向
+ * @author 西伯利亚小菜狗
+ * @date 2025-12-05
+ * @version 1.0
+ */
 /* Includes ------------------------------------------------------------------*/
 #include "MyApplication.h"
 
@@ -12,12 +21,13 @@ static uint32_t g_delay_target_tick = 0;
 static uint8_t  g_delay_in_progress = 0;
 
 /**
-  * @brief  初始化 SysTick 延时环境
-  * @param  sysclk_MHz: 主频 MHz 数，例：72
-  * @retval 无
-  * @note   会自动打开 SysTick 中断，1 ms 周期；如用户已自行编写 SysTick_Handler，
-  *         请把 g_sys_tick++ 合并进已有中断，否则系统滴答不更新
-  */
+ * @brief 初始化SysTick延时环境
+ * @details 配置SysTick定时器，设置时钟源和中断周期，初始化延时因子
+ * @param sysclk_MHz - 系统主频，单位MHz（例如72表示72MHz）
+ * @retval 无
+ * @note 会自动打开SysTick中断，1ms周期；如用户已自行编写SysTick_Handler，
+ *       请把g_sys_tick++合并进已有中断服务函数，否则系统滴答不更新
+ */
 void LL_delay_init(uint16_t sysclk_MHz)
 {
     SysTick->CTRL = 0;                               /* 先关掉 */
@@ -32,11 +42,12 @@ void LL_delay_init(uint16_t sysclk_MHz)
 }
 
 /**
-  * @brief  微秒级阻塞延时
-  * @param  us: 要延时的微秒数，范围 1~0xFFFFFFFF
-  * @retval 无
-  * @note   函数内部临时关闭 SysTick 中断，确保精度；中断在返回前自动恢复
-  */
+ * @brief 微秒级阻塞延时
+ * @details 基于SysTick实现的高精度微秒级阻塞延时，延时期间CPU无法执行其他任务
+ * @param us - 要延时的微秒数，范围1~0xFFFFFFFF
+ * @retval 无
+ * @note 函数内部临时关闭SysTick中断，确保延时精度；中断在返回前自动恢复
+ */
 void LL_delay_us(uint32_t nus)
 {
     uint32_t ticks = nus * g_fac_us;
@@ -62,11 +73,12 @@ void LL_delay_us(uint32_t nus)
 }
 
 /**
-  * @brief  毫秒级阻塞延时
-  * @param  ms: 要延时的毫秒数，范围 1~65535
-  * @retval 无
-  * @note   内部循环调用 LL_delay_us(1000)，因此 1 ms 以下分辨率无效
-  */
+ * @brief 毫秒级阻塞延时
+ * @details 基于微秒延时实现的毫秒级阻塞延时，延时期间CPU无法执行其他任务
+ * @param ms - 要延时的毫秒数，范围1~65535
+ * @retval 无
+ * @note 内部循环调用LL_delay_us(1000)，因此1ms以下分辨率无效
+ */
 void LL_delay_ms(uint16_t nms)
 {
     uint32_t repeat = nms / 1000U;
@@ -81,12 +93,12 @@ void LL_delay_ms(uint16_t nms)
 }
 
 /**
-  * @brief  启动非阻塞毫秒延时
-  * @param  nms: 目标延时毫秒数
-  * @retval 无
-  * @note   启动后需循环调用 LL_delay_ms_check() 查询完成状态；
-  *         不可与阻塞版混用，否则计时基准冲突
-  */
+ * @brief 启动非阻塞毫秒延时
+ * @details 启动一个非阻塞延时计时器，需配合LL_delay_ms_check()查询完成状态
+ * @param nms - 目标延时毫秒数
+ * @retval 无
+ * @note 不可与阻塞版延时混用，否则计时基准会冲突
+ */
 void LL_delay_ms_start(uint16_t nms)
 {
     g_delay_start_tick = SysTick->VAL;  // 记录当前计数值
@@ -95,11 +107,13 @@ void LL_delay_ms_start(uint16_t nms)
 }
 
 /**
-  * @brief  查询非阻塞延时是否完成
-  * @param  无
-  * @retval 1: 已完成；0: 未完成
-  * @note   必须在 1 ms SysTick 中断正常工作的情况下使用
-  */
+ * @brief 查询非阻塞延时是否完成
+ * @details 检查非阻塞延时是否达到目标时间，完成后自动清除延时状态
+ * @param 无
+ * @retval 1 - 延时已完成
+ * @retval 0 - 延时未完成
+ * @note 必须在1ms SysTick中断正常工作的情况下使用
+ */
 uint8_t LL_delay_ms_check(void)
 {
     if (!g_delay_in_progress) return 1;  // 未启动延时，视为已完成
@@ -113,11 +127,12 @@ uint8_t LL_delay_ms_check(void)
 }
 
 /**
-  * @brief  获取系统运行时间（毫秒）
-  * @param  无
-  * @retval 当前 g_sys_tick 值，溢出后自动回零
-  * @note   关中断读取，线程/中断内均可安全调用
-  */
+ * @brief 获取系统运行时间（毫秒）
+ * @details 读取系统滴答计数器的值，代表系统从启动到现在的毫秒数
+ * @param 无
+ * @retval 当前g_sys_tick值，溢出后自动回零
+ * @note 关中断读取，确保线程/中断内均可安全调用，避免读取时发生溢出
+ */
 uint32_t LL_GetTick(void)
 {
     uint32_t tick;
@@ -129,18 +144,26 @@ uint32_t LL_GetTick(void)
 }
 
 /**
-  * @brief  SysTick 中断服务函数（用户可选）
-  * @param  无
-  * @retval 无
-  * @note   如 MCU 启动文件已弱映射，请取消注释下方代码；
-  *         若已在别处实现，请把 g_sys_tick++ 合并进去
-  */
+ * @brief SysTick中断服务函数（用户可选）
+ * @details 每1ms触发一次，更新系统滴答计数器
+ * @param 无
+ * @retval 无
+ * @note 如MCU启动文件已弱映射，请取消注释下方代码；
+ *       若已在别处实现，请把g_sys_tick++合并进去
+ */
 // void SysTick_Handler(void)
 // {
 //     g_sys_tick++;  /* 每毫秒计数+1 */
 // }
 
-/* --------------------  printf redirect  -------------------- */
+/* -------------------- printf redirect -------------------- */
+/**
+ * @brief 重定向fputc函数到USART
+ * @details 实现printf输出到串口，需确保huart_debug已正确初始化
+ * @param ch - 要输出的字符
+ * @param f - 文件指针（标准库使用，忽略）
+ * @retval 输出的字符
+ */
 // int fputc(int ch, FILE *f)
 // {
 //     /* Wait until TXE flag is set */

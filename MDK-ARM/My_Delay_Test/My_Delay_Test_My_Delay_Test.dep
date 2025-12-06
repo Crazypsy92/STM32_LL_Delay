@@ -1,6 +1,6 @@
 Dependencies for Project 'My_Delay_Test', Target 'My_Delay_Test': (DO NOT MODIFY !)
 F (startup_stm32f103xb.s)(0x690968C7)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_My_Delay_Test-ID:\software\stm32\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\stm32\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o my_delay_test\startup_stm32f103xb.o --depend my_delay_test\startup_stm32f103xb.d)
-F (../Core/Src/main.c)(0x69155961)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MyApplication-I.\RTE\_My_Delay_Test-ID:\software\stm32\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\stm32\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xB-o my_delay_test\main.o --omf_browse my_delay_test\main.crf --depend my_delay_test\main.d)
+F (../Core/Src/main.c)(0x6933AA39)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MyApplication-I.\RTE\_My_Delay_Test-ID:\software\stm32\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\stm32\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xB-o my_delay_test\main.o --omf_browse my_delay_test\main.crf --depend my_delay_test\main.d)
 I (../Core/Inc/main.h)(0x69096967)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h)(0x684B9E70)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x684B9E70)
@@ -20,15 +20,12 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h)(0x684B9E70)
-I (../MyApplication/MyApplication.h)(0x69096959)
-I (../Core/Inc/gpio.h)(0x690968C2)
+I (../MyApplication/MyApplication.h)(0x6933AAAA)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\string.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\math.h)(0x588B8344)
-I (../MyApplication/My_Delay.h)(0x69155C10)
+I (../MyApplication/My_Delay.h)(0x69326851)
 I (../Core/Inc/usart.h)(0x690968C3)
+I (../Core/Inc/gpio.h)(0x690968C2)
 F (../Core/Src/gpio.c)(0x690968C2)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MyApplication-I.\RTE\_My_Delay_Test-ID:\software\stm32\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\stm32\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xB-o my_delay_test\gpio.o --omf_browse my_delay_test\gpio.crf --depend my_delay_test\gpio.d)
 I (../Core/Inc/gpio.h)(0x690968C2)
 I (../Core/Inc/main.h)(0x69096967)
@@ -50,13 +47,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h)(0x684B9E70)
-I (../MyApplication/MyApplication.h)(0x69096959)
+I (../MyApplication/MyApplication.h)(0x6933AAAA)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\string.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\math.h)(0x588B8344)
-I (../MyApplication/My_Delay.h)(0x69155C10)
+I (../MyApplication/My_Delay.h)(0x69326851)
 F (../Core/Src/usart.c)(0x690968C2)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MyApplication-I.\RTE\_My_Delay_Test-ID:\software\stm32\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\stm32\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xB-o my_delay_test\usart.o --omf_browse my_delay_test\usart.crf --depend my_delay_test\usart.d)
 I (../Core/Inc/usart.h)(0x690968C3)
 I (../Core/Inc/main.h)(0x69096967)
@@ -78,14 +72,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h)(0x684B9E70)
-I (../MyApplication/MyApplication.h)(0x69096959)
-I (../Core/Inc/gpio.h)(0x690968C2)
+I (../MyApplication/MyApplication.h)(0x6933AAAA)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\string.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\math.h)(0x588B8344)
-I (../MyApplication/My_Delay.h)(0x69155C10)
+I (../MyApplication/My_Delay.h)(0x69326851)
 F (../Core/Src/stm32f1xx_it.c)(0x69155859)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MyApplication-I.\RTE\_My_Delay_Test-ID:\software\stm32\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\stm32\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xB-o my_delay_test\stm32f1xx_it.o --omf_browse my_delay_test\stm32f1xx_it.crf --depend my_delay_test\stm32f1xx_it.d)
 I (../Core/Inc/main.h)(0x69096967)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h)(0x684B9E70)
@@ -106,14 +96,10 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h)(0x684B9E70)
-I (../MyApplication/MyApplication.h)(0x69096959)
-I (../Core/Inc/gpio.h)(0x690968C2)
+I (../MyApplication/MyApplication.h)(0x6933AAAA)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\string.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\math.h)(0x588B8344)
-I (../MyApplication/My_Delay.h)(0x69155C10)
+I (../MyApplication/My_Delay.h)(0x69326851)
 I (../Core/Inc/stm32f1xx_it.h)(0x690968C3)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c)(0x684B9E70)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MyApplication-I.\RTE\_My_Delay_Test-ID:\software\stm32\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\stm32\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xB-o my_delay_test\stm32f1xx_ll_gpio.o --omf_browse my_delay_test\stm32f1xx_ll_gpio.crf --depend my_delay_test\stm32f1xx_ll_gpio.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h)(0x684B9E70)
@@ -201,8 +187,8 @@ I (../Drivers/CMSIS/Include/cmsis_version.h)(0x684B9E4D)
 I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x684B9E4D)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x684B9E4D)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x684B9E70)
-F (..\MyApplication\My_Delay.c)(0x691893AA)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MyApplication-I.\RTE\_My_Delay_Test-ID:\software\stm32\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\stm32\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xB-o my_delay_test\my_delay.o --omf_browse my_delay_test\my_delay.crf --depend my_delay_test\my_delay.d)
-I (..\MyApplication\MyApplication.h)(0x69096959)
+F (..\MyApplication\My_Delay.c)(0x6933AAB9)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MyApplication-I.\RTE\_My_Delay_Test-ID:\software\stm32\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\software\stm32\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DHSI_VALUE="8000000" -DLSI_VALUE="40000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DSTM32F103xB-o my_delay_test\my_delay.o --omf_browse my_delay_test\my_delay.crf --depend my_delay_test\my_delay.d)
+I (..\MyApplication\MyApplication.h)(0x6933AAAA)
 I (../Core/Inc/main.h)(0x69096967)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h)(0x684B9E70)
 I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x684B9E70)
@@ -222,11 +208,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h)(0x684B9E70)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h)(0x684B9E70)
-I (../MyApplication/MyApplication.h)(0x69096959)
-I (../Core/Inc/gpio.h)(0x690968C2)
+I (../MyApplication/MyApplication.h)(0x6933AAAA)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\software\stm32\keil\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\string.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
-I (D:\software\stm32\keil\ARM\ARMCC\include\math.h)(0x588B8344)
-I (..\MyApplication\My_Delay.h)(0x69155C10)
+I (..\MyApplication\My_Delay.h)(0x69326851)

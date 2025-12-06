@@ -107,10 +107,6 @@ int main(void)
   while (1)
   {
 
-    // LL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
-    // // LL_mDelay(500);
-    // LL_delay_ms(500);
-
       // 检查是否到达翻转时间
         if ((LL_GetTick() - last_tick) >= 500)
         {

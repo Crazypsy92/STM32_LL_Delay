@@ -3,16 +3,16 @@
         {
             "name": "My_Delay_Test",
             "includePath": [
-                "d:\\_program\\Cube_MX\\LL\\On-Chip_Peripherals\\My_Delay_Test\\Time_Out_CallBack\\Core\\Inc",
-                "d:\\_program\\Cube_MX\\LL\\On-Chip_Peripherals\\My_Delay_Test\\Time_Out_CallBack\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "d:\\_program\\Cube_MX\\LL\\On-Chip_Peripherals\\My_Delay_Test\\Time_Out_CallBack\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "d:\\_program\\Cube_MX\\LL\\On-Chip_Peripherals\\My_Delay_Test\\Time_Out_CallBack\\Drivers\\CMSIS\\Include",
-                "d:\\_program\\Cube_MX\\LL\\On-Chip_Peripherals\\My_Delay_Test\\Time_Out_CallBack\\MyApplication",
+                "d:\\_storage\\GitHub\\STM32_LL_Delay\\Core\\Inc",
+                "d:\\_storage\\GitHub\\STM32_LL_Delay\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "d:\\_storage\\GitHub\\STM32_LL_Delay\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "d:\\_storage\\GitHub\\STM32_LL_Delay\\Drivers\\CMSIS\\Include",
+                "d:\\_storage\\GitHub\\STM32_LL_Delay\\MyApplication",
                 "D:\\software\\stm32\\keil\\ARM\\ARMCC\\include",
                 "D:\\software\\stm32\\keil\\ARM\\ARMCC\\include\\rw",
-                "d:\\_program\\Cube_MX\\LL\\On-Chip_Peripherals\\My_Delay_Test\\Time_Out_CallBack\\MDK-ARM",
-                "d:\\_program\\Cube_MX\\LL\\On-Chip_Peripherals\\My_Delay_Test\\Time_Out_CallBack\\Core\\Src",
-                "d:\\_program\\Cube_MX\\LL\\On-Chip_Peripherals\\My_Delay_Test\\Time_Out_CallBack\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "d:\\_storage\\GitHub\\STM32_LL_Delay\\MDK-ARM",
+                "d:\\_storage\\GitHub\\STM32_LL_Delay\\Core\\Src",
+                "d:\\_storage\\GitHub\\STM32_LL_Delay\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_FULL_LL_DRIVER",

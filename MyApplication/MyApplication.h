@@ -1,26 +1,23 @@
+/**
+ * @file MyApplication.h
+ * @brief 应用程序总头文件
+ * @details 包含系统基础头文件、标准库头文件及自定义模块头文件，
+ *          作为应用程序的统一头文件入口
+ * @author 西伯利亚小菜狗
+ * @date 2025-12-05
+ * @version 1.0
+ */
 #ifndef __MyApplication_H__
 #define __MyApplication_H__
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-// #include "usart.h"
-#include "gpio.h"
-//#include "tim.h"
-
 #include <stdio.h>
 #include "stdlib.h"
 #include <stdint.h>
-#include <string.h>
-#include <stdarg.h>   /* printf要的 */
-#include <math.h> //PID要运算
 
 #include "My_Delay.h"
-//#include "My_Usart.h"
-//#include "Usart_async.h"
-//#include "My_encoder.h"
-//#include "My_Motor.h"
-//#include "My_MotorPID.h"
 
 #endif
 /********************************************************
