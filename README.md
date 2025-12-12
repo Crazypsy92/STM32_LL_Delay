@@ -74,7 +74,7 @@ uint32_t LL_GetTick(void);               // 读取系统滴答
 
 **Q3: 我想在 FreeRTOS 里用？**
 
-*   非阻塞版可安全放在 Task 中；阻塞版会抢占微秒级时间片，建议改用 RTOS 自带 API
+*   建议改用 RTOS 自带 API,rtos有类似gettick的东西
 
 ## 许可证
 
